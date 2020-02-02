@@ -22,5 +22,8 @@
 
 	"postCreateCommand": "mkdir -p ~/.ssh && cp -r ~/.ssh-localhost/* ~/.ssh && chmod 700 ~/.ssh && chmod 600 ~/.ssh/*",
 
-	"extensions": ["ms-python.python"]
+	"extensions": ["ms-python.python"],
+	
+	//"workspaceMount": "src=<REMOTE_HOST_PATH>,dst=<REMOTE_HOST_CONTAINER_PATH>,type=bind",
+	//"workspaceFolder": "/workspace"
 }
