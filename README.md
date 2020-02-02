@@ -1,1 +1,1 @@
-# vscode_docker_template
+# Template for vscode remote docker development
