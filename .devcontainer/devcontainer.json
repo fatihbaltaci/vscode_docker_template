@@ -1,0 +1,26 @@
+{
+	"name": "Existing Dockerfile",
+
+	"context": "..",
+
+	"dockerFile": "../Dockerfile",
+        // "image": "ubuntu:18.04",
+
+	"runArgs": [
+		"-v", "${env:HOME}${env:USERPROFILE}/.ssh:/root/.ssh-localhost:ro",
+		"-p", "1414:1414",
+	],
+
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash",
+		"python.pythonPath": "python",
+		"python.linting.enabled": true,
+		"python.linting.pylintEnabled": true,
+		"python.linting.pylintPath": "pylint",
+		"python.linting.pylintArgs": ["--extension-pkg-whitelist=cv2"]
+	},
+
+	"postCreateCommand": "mkdir -p ~/.ssh && cp -r ~/.ssh-localhost/* ~/.ssh && chmod 700 ~/.ssh && chmod 600 ~/.ssh/*",
+
+	"extensions": ["ms-python.python"]
+}
