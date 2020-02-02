@@ -3,4 +3,5 @@
     "python.linting.pylintEnabled": true,
     "python.linting.pycodestyleEnabled": false,
     "python.linting.enabled": true,
+    // "docker.host":"ssh://your-remote-user@your-remote-machine-fqdn-or-ip-here",
 }
