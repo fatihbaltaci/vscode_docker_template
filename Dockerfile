@@ -8,7 +8,9 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 RUN pip --no-cache-dir install \
-        Django==3.0.2
+        Django==3.0.2 \
+        pylint \
+        autopep8
 
 WORKDIR /workspace
 
