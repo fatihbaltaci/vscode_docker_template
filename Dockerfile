@@ -11,6 +11,8 @@ RUN pip --no-cache-dir install \
         Django==3.0.2 \
         pylint \
         autopep8
+        
+RUN ln -sf /usr/share/zoneinfo/Turkey /etc/localtime
 
 WORKDIR /workspace
 
