@@ -4,7 +4,7 @@ LABEL maintainer="baltacifatih14@gmail.com"
 
 RUN apt-get update && \
     apt-get install -y \
-        wget vim unzip zip curl && \ 
+        wget vim unzip zip curl tzdata && \ 
     rm -rf /var/lib/apt/lists/*
 
 RUN pip --no-cache-dir install \
