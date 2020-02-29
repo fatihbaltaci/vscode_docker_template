@@ -12,6 +12,9 @@ RUN pip --no-cache-dir install \
         pylint \
         autopep8
         
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
+
 RUN ln -sf /usr/share/zoneinfo/Turkey /etc/localtime
 
 WORKDIR /workspace
