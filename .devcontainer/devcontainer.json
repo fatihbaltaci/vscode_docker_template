@@ -13,7 +13,7 @@
 		//for GUI
 		//"-v", "/tmp/.X11-unix:/tmp/.X11-unix",
 		//"-e", "DISPLAY=${env:DISPLAY}",
-		//"--ipc", "host",
+		"--ipc", "host",
 	],
 
 	"settings": {
@@ -22,12 +22,21 @@
 		"python.linting.enabled": true,
 		"python.linting.pylintEnabled": true,
 		"python.linting.pylintPath": "pylint",
-		"python.linting.pylintArgs": ["--errors-only","--generated-members=numpy.* ,torch.* ,cv2.* , cv.*"]
+		"python.linting.pylintArgs": ["--errors-only","--generated-members=numpy.* ,torch.* ,cv2.* , cv.*"],
+		"python.testing.unittestEnabled": true,
+		"python.testing.nosetestsEnabled": true,
+		//"python.jediEnabled": true,
+		"files.watcherExclude": {
+			"**/.git/objects/**": true,
+			"**/.git/subtree-cache/**": true,
+			"**/data/*/**": true,
+			"**/output/*/**": true,
+		}
 	},
 
 	"postCreateCommand": "mkdir -p ~/.ssh && cp -r ~/.ssh-localhost/* ~/.ssh && chmod 700 ~/.ssh && chmod 600 ~/.ssh/*",
 
-	"extensions": ["ms-python.python"],
+	"extensions": ["ms-python.python", "eamodio.gitlens"],
 	
 	//"workspaceMount": "src=<REMOTE_HOST_PATH>,dst=<REMOTE_HOST_CONTAINER_PATH>,type=bind",
 	//"workspaceFolder": "/workspace"
