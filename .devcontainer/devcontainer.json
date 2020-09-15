@@ -10,6 +10,9 @@
 		"-v", "${env:HOME}${env:USERPROFILE}/.ssh:/root/.ssh-localhost:ro",
 		//"-p", "1414:1414",
 		
+		"-e", "REST_USERNAME=${env:REST_USERNAME}",
+		"-e", "REST_PASSWORD=${env:REST_PASSWORD}",
+		
 		//for GUI
 		//"-v", "/tmp/.X11-unix:/tmp/.X11-unix",
 		//"-e", "DISPLAY=${env:DISPLAY}",
