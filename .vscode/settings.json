@@ -1,7 +1,23 @@
 {
-    "python.pythonPath": "python",
-    "python.linting.pylintEnabled": true,
-    "python.linting.pycodestyleEnabled": false,
+    "python.pythonPath": "python3",
     "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintPath": "pylint",
+    "python.linting.pylintArgs": [
+        "--errors-only",
+        "--generated-members=numpy.* ,torch.* ,cv2.* , cv.*"
+    ],
+    "python.testing.unittestEnabled": true,
+    "python.testing.nosetestsEnabled": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.languageServer": "Pylance",
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.extraPaths": ["add/path/extra/for/unresolved/imports"],  // CHANGE
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/data/*/**": true,
+        "**/output/*/**": true,
+    }
     // "docker.host":"ssh://your-remote-user@your-remote-machine-fqdn-or-ip-here",
 }
